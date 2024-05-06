@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: cadetblue;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-size: 25px;
+    }
+    div {
+        background: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+    }
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 15px 20px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+    label {
+        margin-top: 10px;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+        font-size: 25px;
+    }
+</style>
+<body>
+<div>
+    <h1>Hello, this is the home page</h1>
+    <h2>What do you want to do?</h2>
+    <button type="submit">
+        <a href="http://localhost:8081/auth/registration">Register</a>
+    </button>
+    <button type="submit">
+        <a href="http://localhost:8081/auth/loginIn">Login</a>
+    </button>
+    <button type="submit">
+        <a href="http://localhost:8081/start">
+            Log in using third-party services</a>
+    </button>
+</div>
+</body>
+</html>

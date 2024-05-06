@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: cadetblue;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-size: 25px;
+    }
+    form {
+        background: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+    }
+    input[type=email], input[type=password], input[type=text] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 15px 20px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 25px;
+    }
+    button:hover {
+        background-color: #45a049;
+        font-size: 25px;
+    }
+    label {
+        margin-top: 10px;
+    }
+</style>
+<body>
+<form th:action="@{registration}" method="post" th:object="${user}">
+    <h1>Registration</h1>
+    <label for="email">Email:</label>
+    <input th:field="*{email}" type="email" id="email" name="email"
+           placeholder="user@example.com" required><br>
+
+    <label for="password">Password:</label>
+    <input th:field="*{password}" type="password" id="password" name="password"
+           placeholder="User=123456789" required><br>
+
+    <label for="repeatPassword">repeatPassword:</label>
+    <input th:field="*{repeatPassword}" type="password" id="repeatPassword" name="repeatPassword"
+           placeholder="User=123456789" required><br>
+
+    <label th:field="*{firstName}" for="firstName">First name:</label>
+    <input type="text" id="firstName" name="firstName" placeholder="User" required><br>
+
+    <label for="lastName">Last name:</label>
+    <input th:field="*{lastName}" type="text" id="lastName" name="lastName" required><br>
+
+    <button type="submit">Register</button>
+</form>
+</body>
+</html>
